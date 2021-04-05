@@ -9,6 +9,8 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				sans: ["Inter var", ...defaultTheme.fontFamily.sans],
+				serif: ["NewsreaderVariable", ...defaultTheme.fontFamily.serif],
+				display: ["InterDisplay var"],
 			},
 			maxWidth: {
 				"85ch": "85ch",
