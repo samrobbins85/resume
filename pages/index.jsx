@@ -62,6 +62,7 @@ export default function IndexPage({ data }) {
 			<Head>
 				<title>Resume</title>
 				<meta name="Description" content="My resume" />
+				<link rel="icon" type="image/x-icon" href="favicon.ico" />
 			</Head>
 			<div className="max-w-85ch mx-auto px-4">
 				<span

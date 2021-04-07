@@ -4,6 +4,12 @@ class MyDocument extends Document {
 	render() {
 		return (
 			<Html lang="en">
+				<head
+					dangerouslySetInnerHTML={{
+						__html:
+							"<!-- Favicon courtesy of Twemoji https://twemoji.twitter.com/ -->",
+					}}
+				/>
 				<Head />
 				<body>
 					<Main />
