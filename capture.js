@@ -19,7 +19,7 @@ const http = require("http");
 		waitUntil: "networkidle2",
 	});
 
-	await page.pdf({ path: "cv.pdf", format: "A4" });
+	await page.pdf({ path: "out/cv.pdf", format: "A4" });
 	await browser.close();
 	await server.close();
 })();
