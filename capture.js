@@ -18,6 +18,11 @@ const http = require("http");
 	await page.goto("http://localhost:3000", {
 		waitUntil: "networkidle2",
 	});
+	await page.evaluate(() => {
+		const toremove = document.querySelector("#download");
+
+		toremove.parentNode.removeChild(toremove);
+	});
 
 	await page.pdf({ path: "out/cv.pdf", format: "A4" });
 	await browser.close();

@@ -1,11 +1,8 @@
 import Head from "next/head";
 import { Linkedin, GitHub, Globe, Mail } from "react-feather";
 import { StructuredText } from "react-datocms";
+import { DownloadIcon } from "@heroicons/react/outline";
 import getData from "../lib/cms";
-
-export const config = {
-	unstable_runtimeJS: false,
-};
 
 function Social({ email, website, github, linkedin }) {
 	return (
@@ -67,6 +64,15 @@ export default function IndexPage({ data }) {
 				<meta name="Description" content="My resume" />
 			</Head>
 			<div className="max-w-85ch mx-auto px-4">
+				<span
+					id="download"
+					className="flex justify-center text-blue-600 pt-2"
+				>
+					<DownloadIcon className="h-6 w-6 mr-1" />{" "}
+					<a href="/cv.pdf" className="hover:underline">
+						Download as PDF
+					</a>
+				</span>
 				<h1 className="text-center text-4xl font-medium py-6 pt-8 font-display tracking-wide">
 					{data.name}
 				</h1>
