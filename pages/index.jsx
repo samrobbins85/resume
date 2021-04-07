@@ -3,6 +3,10 @@ import { Linkedin, GitHub, Globe, Mail } from "react-feather";
 import { StructuredText } from "react-datocms";
 import getData from "../lib/cms";
 
+export const config = {
+	unstable_runtimeJS: false,
+};
+
 function Social({ email, website, github, linkedin }) {
 	return (
 		<div className="flex justify-between pb-4 tracking-wider">
