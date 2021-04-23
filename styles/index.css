@@ -12,3 +12,7 @@ strong {
 @page {
 	size: a4;
 }
+
+:root {
+	font-size: 10pt;
+}

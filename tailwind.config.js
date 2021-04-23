@@ -19,6 +19,7 @@ module.exports = {
 			},
 			fontSize: {
 				"12pt": "12pt",
+				"10pt": "10pt",
 			},
 			screens: {
 				sm: { min: "600px", max: "767px" },

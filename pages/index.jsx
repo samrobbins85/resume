@@ -6,7 +6,7 @@ import getData from "../lib/cms";
 
 function Social({ email, website, github, linkedin }) {
 	return (
-		<div className="flex justify-center gap-x-2 gap-y-2 sm:justify-between pb-4 tracking-wider flex-wrap text-12pt">
+		<div className="flex justify-center gap-x-6 gap-y-2 sm:justify-between pb-4 tracking-wider flex-wrap">
 			<div className="flex">
 				<Mail className="mr-2" />
 				<a className="underline" href={`mailto:${email}`}>
@@ -68,7 +68,7 @@ export default function IndexPage({ data }) {
 				<meta name="Description" content="My resume" />
 				<link rel="icon" type="image/x-icon" href="favicon.ico" />
 			</Head>
-			<div className="max-w-85ch mx-auto px-4">
+			<div className="max-w-85ch print:max-w-none mx-auto px-4">
 				<span
 					id="download"
 					className="flex justify-center text-blue-600 pt-2"
@@ -87,7 +87,7 @@ export default function IndexPage({ data }) {
 					github={data.github}
 					linkedin={data.linkedin}
 				/>
-				<div className="!text-12pt">
+				<div>
 					<Section
 						title="Skills"
 						content={
@@ -139,9 +139,7 @@ export default function IndexPage({ data }) {
 										<span className="italic text-gray-700">
 											{x.duration}
 										</span>
-										<span className="text-base">
-											{x.description}
-										</span>
+										<span>{x.description}</span>
 									</div>
 								))}
 							</div>
