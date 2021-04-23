@@ -8,3 +8,7 @@
 strong {
 	@apply font-medium;
 }
+
+@page {
+	size: a4;
+}

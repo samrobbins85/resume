@@ -13,7 +13,9 @@ const http = require("http");
 	server.listen(3000, () => {
 		console.log("Running at http://localhost:3000");
 	});
-	const browser = await puppeteer.launch({ args: ["--no-sandbox"] });
+	const browser = await puppeteer.launch({
+		args: ["--no-sandbox", "--font-render-hinting=none"],
+	});
 	const page = await browser.newPage();
 	await page.goto("http://localhost:3000", {
 		waitUntil: "networkidle2",
@@ -24,7 +26,7 @@ const http = require("http");
 		toremove.parentNode.removeChild(toremove);
 	});
 
-	await page.pdf({ path: "out/cv.pdf", format: "A4" });
+	await page.pdf({ path: "out/cv.pdf", preferCSSPageSize: true });
 	await browser.close();
 	await server.close();
 })();

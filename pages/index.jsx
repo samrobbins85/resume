@@ -6,7 +6,7 @@ import getData from "../lib/cms";
 
 function Social({ email, website, github, linkedin }) {
 	return (
-		<div className="flex justify-between pb-4 tracking-wider">
+		<div className="flex justify-center gap-x-2 gap-y-2 sm:justify-between pb-4 tracking-wider flex-wrap text-12pt">
 			<div className="flex">
 				<Mail className="mr-2" />
 				<a className="underline" href={`mailto:${email}`}>
@@ -49,9 +49,13 @@ function SkillList({ title, list }) {
 
 function Section({ title, content }) {
 	return (
-		<div className="grid grid-cols-5 py-2">
-			<div className="text-2xl">{title}</div>
-			<div className="col-span-4 grid gap-y-1">{content}</div>
+		<div className="grid grid-cols-1 sm:grid-cols-5 py-2 print:grid-cols-5">
+			<div className="text-2xl font-semibold sm:font-normal pb-2 sm:pb-0">
+				{title}
+			</div>
+			<div className="sm:col-span-4 print:col-span-4 grid gap-y-1">
+				{content}
+			</div>
 		</div>
 	);
 }
@@ -83,7 +87,7 @@ export default function IndexPage({ data }) {
 					github={data.github}
 					linkedin={data.linkedin}
 				/>
-				<div className="">
+				<div className="!text-12pt">
 					<Section
 						title="Skills"
 						content={
@@ -150,20 +154,19 @@ export default function IndexPage({ data }) {
 								{data.project.map((x) => (
 									<div className="grid">
 										<div className="text-lg">
-											<span className="font-medium">
-												{x.name}
-											</span>
-											{x.link && (
-												<>
-													{" "}
-													—{" "}
-													<a
-														className="text-blue-700 underline"
-														href={`https://${x.link}`}
-													>
-														{x.link}
-													</a>
-												</>
+											{x.link ? (
+												<a
+													href={x.link}
+													className="underline text-cyan-600"
+												>
+													<span className="font-medium">
+														{x.name}
+													</span>
+												</a>
+											) : (
+												<span className="font-medium">
+													{x.name}
+												</span>
 											)}
 										</div>
 										<span className="italic text-gray-700">
