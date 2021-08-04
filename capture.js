@@ -26,7 +26,7 @@ const http = require("http");
 		toremove.parentNode.removeChild(toremove);
 	});
 
-	await page.pdf({ path: "out/cv.pdf", preferCSSPageSize: true });
+	await page.pdf({ path: "out/cv.pdf", format: "a4", scale: 0.8 });
 	await browser.close();
 	await server.close();
 })();

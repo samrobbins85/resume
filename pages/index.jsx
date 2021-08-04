@@ -49,7 +49,7 @@ function SkillList({ title, list }) {
 
 function Section({ title, content }) {
 	return (
-		<div className="grid grid-cols-1 sm:grid-cols-5 py-2 print:grid-cols-5">
+		<div className="grid grid-cols-1 sm:grid-cols-5 py-2 print:py-4 print:grid-cols-5">
 			<div className="text-2xl font-semibold sm:font-normal pb-2 sm:pb-0">
 				{title}
 			</div>
@@ -81,12 +81,14 @@ export default function IndexPage({ data }) {
 				<h1 className="text-center text-4xl font-medium py-6 pt-8 font-display tracking-wide">
 					{data.name}
 				</h1>
-				<Social
-					email={data.email}
-					website={data.website}
-					github={data.github}
-					linkedin={data.linkedin}
-				/>
+				<div className="py-4">
+					<Social
+						email={data.email}
+						website={data.website}
+						github={data.github}
+						linkedin={data.linkedin}
+					/>
+				</div>
 				<div className="!text-12pt">
 					<Section
 						title="Skills"
@@ -107,23 +109,7 @@ export default function IndexPage({ data }) {
 							</>
 						}
 					/>
-					<Section
-						title="Education"
-						content={data.education.map((x) => (
-							<div className="grid" key={x.qualification}>
-								<div className="text-lg">
-									<span className="font-medium">
-										{x.qualification}
-									</span>{" "}
-									— {x.institution}
-								</div>
-								<span className="italic text-gray-700">
-									{x.duration}
-								</span>
-								<StructuredText data={x.description} />
-							</div>
-						))}
-					/>
+
 					<Section
 						title="Experience"
 						content={
@@ -146,6 +132,23 @@ export default function IndexPage({ data }) {
 								))}
 							</div>
 						}
+					/>
+					<Section
+						title="Education"
+						content={data.education.map((x) => (
+							<div className="grid" key={x.qualification}>
+								<div className="text-lg">
+									<span className="font-medium">
+										{x.qualification}
+									</span>{" "}
+									— {x.institution}
+								</div>
+								<span className="italic text-gray-700">
+									{x.duration}
+								</span>
+								<StructuredText data={x.description} />
+							</div>
+						))}
 					/>
 					<Section
 						title="Projects"
