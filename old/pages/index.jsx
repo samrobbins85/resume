@@ -61,6 +61,7 @@ function Section({ title, content }) {
 }
 
 export default function IndexPage({ data }) {
+	console.log(data);
 	return (
 		<>
 			<Head>
