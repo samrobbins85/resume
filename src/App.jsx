@@ -1,5 +1,5 @@
 import { DownloadIcon } from "@heroicons/react/outline";
-import { data } from "./data";
+import data from "../data.json";
 import Social from "./components/Social";
 import Section from "./components/Section";
 import SkillList from "./components/SkillList";

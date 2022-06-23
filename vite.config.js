@@ -5,7 +5,6 @@ const generatePDF = () => ({
   name: "reload",
   configureServer(server) {
     server.watcher.on("change", async (path) => {
-      console.log(path);
       if (!path.endsWith(".pdf")) {
         const browser = await puppeteer.launch({
           args: ["--no-sandbox", "--font-render-hinting=none"],
