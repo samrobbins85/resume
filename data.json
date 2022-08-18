@@ -12,7 +12,10 @@
     "React Router",
     "Hugo",
     "Styled Components",
-    "Tailwind CSS"
+    "Tailwind CSS",
+    "Storybook",
+    "Cypress",
+    "Jest"
   ],
   "software": ["Git", "Bash", "Powershell"],
   "platforms": ["Arduino", "Raspberry Pi", "Linux"],
@@ -28,7 +31,7 @@
     {
       "role": "Software Engineer",
       "duration": "Aug 2021 - Present",
-      "description": "A front end development role using React to build a cybersecurity awareness platform",
+      "description": "Front end development with React, TypeScript and Styled Components. Includes testing with Jest and Cypress and documentation with Storybook",
       "company": "CybSafe"
     },
     {
@@ -48,6 +51,32 @@
       "duration": "Jul 2020 - Sep 2020",
       "description": "Built a tool to compare DNS services and a tool to detect the presence of Intel security measures on a computer",
       "company": "Global Cyber Alliance"
+    }
+  ],
+  "writing": [
+    {
+      "title": "Migration From jQuery to Next.js: A Guide",
+      "link": "https://www.smashingmagazine.com/2022/08/migration-jquery-next-js-guide/",
+      "date": "Aug 2022",
+      "publication": "Smashing Magazine"
+    },
+    {
+      "title": "A beginner's guide to JSON, the data format for the internet",
+      "link": "https://stackoverflow.blog/2022/06/02/a-beginners-guide-to-json-the-data-format-for-the-internet/",
+      "date": "Jun 2022",
+      "publication": "Stack Overflow"
+    },
+    {
+      "title": "Adding form submissions to Notion using Next.js and Netlify",
+      "link": "https://www.netlify.com/blog/form-handling-nextjs-notion/",
+      "date": "Mar 2022",
+      "publication": "Netlify"
+    },
+    {
+      "title": "Write A Plugin For Tailwind CSS",
+      "link": "https://egghead.io/blog/write-a-plugin-for-tailwind-css",
+      "date": "Apr 2021",
+      "publication": "Egghead"
     }
   ],
   "project": [

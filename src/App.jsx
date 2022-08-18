@@ -3,6 +3,7 @@ import data from "../data.json";
 import Social from "./components/Social";
 import Section from "./components/Section";
 import SkillList from "./components/SkillList";
+import Item from "./components/Item";
 function App() {
   return (
     <>
@@ -24,7 +25,7 @@ function App() {
             linkedin={data.linkedin}
           />
         </div>
-        <div className="!text-12pt">
+        <div>
           <Section title="Skills">
             <>
               <SkillList title="Programming Languages" list={data.languages} />
@@ -32,51 +33,52 @@ function App() {
                 title="Libraries & Frameworks"
                 list={data.librariesAndFrameworks}
               />
-              <SkillList title="Software" list={data.software} />
             </>
           </Section>
 
           <Section title="Experience">
             <div className="grid gap-y-2">
               {data.experience.map((x) => (
-                <div className="grid">
-                  <div className="text-lg">
-                    <span className="font-medium">{x.role}</span> — {x.company}
-                  </div>
-                  <span className="italic text-gray-700">{x.duration}</span>
-                  <span className="text-base">{x.description}</span>
-                </div>
+                <Item
+                  title={x.role}
+                  location={x.company}
+                  time={x.duration}
+                  description={x.description}
+                />
+              ))}
+            </div>
+          </Section>
+          <Section title="Writing">
+            <div className="grid gap-y-2">
+              {data.writing.map((x) => (
+                <Item
+                  title={x.title}
+                  time={x.date}
+                  link={x.link}
+                  location={x.publication}
+                />
               ))}
             </div>
           </Section>
           <Section title="Education">
             {data.education.map((x) => (
-              <div className="grid" key={x.qualification}>
-                <div className="text-lg">
-                  <span className="font-medium">{x.qualification}</span> —{" "}
-                  {x.institution}
-                </div>
-                <span className="italic text-gray-700">{x.duration}</span>
-                <p>{x.description}</p>
-              </div>
+              <Item
+                title={x.qualification}
+                location={x.institution}
+                time={x.duration}
+                description={x.description}
+              />
             ))}
           </Section>
           <Section title="Projects">
             <div className="grid gap-y-2">
               {data.project.map((x) => (
-                <div className="grid">
-                  <div className="text-lg">
-                    {x.link ? (
-                      <a href={x.link} className="underline text-cyan-600">
-                        <span className="font-medium">{x.name}</span>
-                      </a>
-                    ) : (
-                      <span className="font-medium">{x.name}</span>
-                    )}
-                  </div>
-                  <span className="italic text-gray-700">{x.date}</span>
-                  <span>{x.description}</span>
-                </div>
+                <Item
+                  title={x.name}
+                  link={x.link}
+                  time={x.date}
+                  description={x.description}
+                />
               ))}
             </div>
           </Section>
