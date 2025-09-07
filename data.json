@@ -4,7 +4,13 @@
   "github": "samrobbins85",
   "email": "samrobbinsgb@gmail.com",
   "website": "samrobbins.uk",
-  "languages": ["JavaScript", "TypeScript", "Python", "SQL", "CSS"],
+  "languages": [
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "SQL",
+    "CSS"
+  ],
   "librariesAndFrameworks": [
     "React",
     "Next.js",
@@ -17,8 +23,16 @@
     "Cypress",
     "Jest"
   ],
-  "software": ["Git", "Bash", "Powershell"],
-  "platforms": ["Arduino", "Raspberry Pi", "Linux"],
+  "software": [
+    "Git",
+    "Bash",
+    "Powershell"
+  ],
+  "platforms": [
+    "Arduino",
+    "Raspberry Pi",
+    "Linux"
+  ],
   "education": [
     {
       "institution": "Durham University",
@@ -29,8 +43,14 @@
   ],
   "experience": [
     {
+      "role": "Senior Software Engineer",
+      "duration": "Jul 2023 - Present",
+      "description": "Front end development with React, Inertia and Next.js",
+      "company": "CybSafe"
+    },
+    {
       "role": "Software Engineer",
-      "duration": "Aug 2021 - Present",
+      "duration": "Aug 2021 - Jul 2023",
       "description": "Front end development with React, TypeScript and Styled Components. Includes testing with Jest and Cypress and documentation with Storybook",
       "company": "CybSafe"
     },
